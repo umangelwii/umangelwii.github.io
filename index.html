@@ -1,1 +1,253 @@
-Hello World
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>elwii.com | IT services, phone application development, web development, outsourcing in india</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="keywords" content="outsourcing in india, IT services, Web development, Microservices development, phone app development in india" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		// click on button submit
+  	$("#submit").click(function(){
+			// send ajax
+			$.ajax({
+				url: 'http://52.201.71.118:9090/elwii-site-api-1.0/v1.0/site/contactus',
+				type : "POST",
+				dataType : 'json',
+				contentType: 'application/json',
+				data : formToJSON(),
+					success : function(result) {
+						$("#contactus-form").trigger("reset");
+				},
+				error: function(xhr, resp, text) {
+					console.log(xhr, resp, text);
+				}
+			})
+		});
+	});
+	function formToJSON() {
+		return JSON.stringify({
+				"name": $('#name').val(),
+				"email": $('#email').val(),
+				"message": $('#message').val()
+				});
+			};
+
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108831944-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-108831944-1');
+	</script>
+
+</head>
+<body>
+
+	<!-- Sidebar -->
+	<section id="sidebar">
+		<div class="inner">
+			<nav>
+				<ul>
+					<li><a href="#intro">Welcome</a></li>
+					<li><a href="#one">Who we are</a></li>
+					<li><a href="#two">What we do</a></li>
+					<li><a href="#three">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Intro -->
+		<section id="intro" class="wrapper style1 fullscreen fade-up">
+			<div class="inner">
+				<h1>elwii</h1>
+				<p>At elwii, we build amazing Web applications and Android,iOS applications<br />
+					and we provide full lifecycle support. Build, Deploy, Maintain. <br />
+					It is that simple.</p>
+					<ul class="actions">
+						<li><a href="#one" class="button scrolly">Learn more</a></li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- One -->
+			<section id="one" class="wrapper style2 spotlights">
+				<section>
+					<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+					<div class="content">
+						<div class="inner">
+							<h2>Team</h2>
+							<p>We are team of programmers who believes that building a software is art.
+								We believe in writing code that is easy to test and easy to maintain. Our team follows agile software methodologies
+								and delivers quality software on time. <br/> We love what we do.</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+						<div class="content">
+							<div class="inner">
+								<h2>Lead</h2>
+								<p>Founder and CEO believes in providing solutions that are simple, easy to maintain yet highly secure and scalable.
+									He comes with 8 plus years of experience and has exposer to wide range of technologies and applications. Prior to founding and running elwii he
+									has worked on solutions being used by Airbus, Boeing, Lockheed Martin and more.</p>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Mission and Vision</h2>
+									<p>Minimalism and Simple, elegant solutions at low prices.</p>
+								</div>
+							</div>
+						</section>
+					</section>
+
+					<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>What we do</h2>
+							<p>Here are few of our experties and technologies that we love to work on.</p>
+							<div class="features">
+								<section>
+									<span class="icon major fa-code"></span>
+									<h3>Web Development</h3>
+									<p>We like to build web applications that look beautiful and perform well.
+										We build stand alone web applications that talk with backend through APIs.</p>
+									</section>
+									<section>
+										<span class="icon major fa-mobile"></span>
+										<h3>Phone App Development</h3>
+										<p>We build easy to use and great looking phone applications. We build Android and iOS applications.</p>
+									</section>
+									<section>
+										<span class="icon major fa-server"></span>
+										<h3>Microservice Architecture</h3>
+										<p>Because you don't want to get a monolith application that is big, hard to expand and maintain.</p>
+									</section>
+									<section>
+										<span class="icon major fa-chain"></span>
+										<h3>API Development</h3>
+										<p>APIs are crucial part of any application. Better APIs are reusable for web applications and mobile appilcations.</p>
+									</section>
+									<section>
+										<span class="icon major fa-lock"></span>
+										<h3>Security</h3>
+										<p>When exposing APIs security is a major concern. We use mainly java technologies to build APIs and to provide highly secure systems.</p>
+									</section>
+									<section>
+										<span class="icon major fa-desktop"></span>
+										<h3>Testing</h3>
+										<p>Unit tests with as much coverage as possible. Integration tests. Automation testing. Manual testing. UAT.</p>
+									</section>
+									<section>
+										<span class="icon major fa-diamond"></span>
+										<h3>Deployment</h3>
+										<p>Deployment as per your needs. On Google cloud or on Amazon cloud or Azure.</p>
+									</section>
+									<section>
+										<span class="icon major fa-cog"></span>
+										<h3>Maintainance</h3>
+										<p>24/7 Support. New implementations. Configurations, Sacling as per needs. Bug Fixes.</p>
+									</section>
+									<section>
+										<span class="icon major fa-money"></span>
+										<h3>Cost Effective Solutions</h3>
+										<p>One of our mission is to provide elegant applications at comparatively lower costs.</p>
+									</section>
+									<section>
+										<span class="icon major fa-smile-o"></span>
+										<h3>Happy Clients</h3>
+										<p>We believe in long term relationships with our clients and providing them with the best in industry solutions.</p>
+									</section>
+								</div>
+							</div>
+						</section>
+
+						<!-- Three -->
+						<section id="three" class="wrapper style1 fade-up">
+							<div class="inner">
+								<h2>Contact Us</h2>
+								<!-- <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p> -->
+								<div class="split style1">
+									<section>
+										<form id="contactus-form" method="post" action="#">
+											<div class="field half first">
+												<label for="name">Name</label>
+												<input type="text" name="name" id="name" />
+											</div>
+											<div class="field half">
+												<label for="email">Email</label>
+												<input type="text" name="email" id="email" />
+											</div>
+											<div class="field">
+												<label for="message">Message</label>
+												<textarea name="message" id="message" rows="5"></textarea>
+											</div>
+											<ul class="actions">
+												<li><button id="submit" class="button submit">Send Message</button></li>
+											</ul>
+										</form>
+									</section>
+									<section>
+										<ul class="contact">
+											<li>
+												<h3>Address</h3>
+												<span>201, 202 Vishala Landmark<br />
+													Ahmedabad<br />
+													Gujarat</span>
+												</li>
+												<li>
+													<h3>Email</h3>
+													info at elwii dot com
+												</li>
+												<li>
+													<h3>Social</h3>
+													<ul class="icons">
+														<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
+														<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
+														<li><a href="https://www.linkedin.com/company/elwii/" target="_blank" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
+													</ul>
+												</li>
+											</ul>
+										</section>
+									</div>
+								</div>
+							</section>
+
+						</div>
+
+						<!-- Footer -->
+						<footer id="footer" class="wrapper style1-alt">
+							<div class="inner">
+								<ul class="menu">
+									<li>&copy; elwii. All rights reserved.</li>
+								</ul>
+							</div>
+						</footer>
+
+						<!-- Scripts -->
+						<script src="assets/js/jquery.min.js"></script>
+						<script src="assets/js/jquery.scrollex.min.js"></script>
+						<script src="assets/js/jquery.scrolly.min.js"></script>
+						<script src="assets/js/skel.min.js"></script>
+						<script src="assets/js/util.js"></script>
+						<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+						<script src="assets/js/main.js"></script>
+
+					</body>
+					</html>
